@@ -25,9 +25,16 @@ body > .ember-view {
       text-align: center;
       padding: 14px 16px;
       background-color: #ddd;
-      &.selected {
+      &:hover {
         background-color: #F4FF77;
       }
+      &.selected {
+        background-color: #F4FF77;
+        &:hover {
+          //background-color: #ddd;
+        }
+      }
+
       a {
         text-decoration: none;
         color: #666;
