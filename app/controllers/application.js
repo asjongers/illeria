@@ -38,8 +38,8 @@ export default Ember.Controller.extend({
 
   actions: {
     scrollTop() {
-      Ember.run.later(function() {
-        Ember.$('.middle').stop().animate({scrollTop: 0}, 1000);
+      Ember.run.debounce(function() {
+        Ember.$('.middle').stop().animate({scrollTop: 0}, 500);
       }, 0);
     }
   }
