@@ -1,3 +1,14 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<div class="header">
+  <div class="logo">LOGO</div>
+  <ul class="menu">
+    {{#each menu as |item|}}
+      <li class="menu-item{{if (eq navigation.currentPage item.id) ' selected'}}" title={{item.tooltip}}>{{#link-to item.id}}{{item.name}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+</div>
+<div class="middle">
+  {{outlet}}
+</div>
+<div class="footer">
+  <button class="scroll-top" {{action "scrollTop"}}>Retour au sommet</button>
+</div>

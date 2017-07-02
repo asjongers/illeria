@@ -1,0 +1,58 @@
+body {
+  height: 100VH;
+  overflow: hidden;
+}
+body > .ember-view {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  border: 2px solid black;
+  margin: 10px;
+  padding: 5px;
+  display: table-cell;
+
+  .menu {
+    float: right;
+    list-style-type: none;
+    display: inline;
+    margin-right: 15px;
+
+    .menu-item {
+      float: left;
+      display: inline-block;
+      text-align: center;
+      padding: 14px 16px;
+      background-color: #ddd;
+      &.selected {
+        background-color: #F4FF77;
+      }
+      a {
+        text-decoration: none;
+        color: #666;
+      }
+    }
+  }
+}
+
+.middle {
+  border: 2px solid red;
+  margin: 10px;
+  padding: 5px;
+  height: auto;
+  overflow: auto;
+  flex: 1;
+  white-space: pre-line;
+}
+
+.footer {
+  border: 2px solid blue;
+  margin: 10px;
+  padding: 5px;
+  overflow: hidden;
+  display: inline-block;
+  .scroll-top {
+    float: right;
+  }
+}
