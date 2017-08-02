@@ -8,8 +8,6 @@ body > .ember-view {
   flex-direction: column;
 }
 .header {
-  //-webkit-box-shadow:0px 1px 1px #de1dde;
-  //-moz-box-shadow:0px 1px 1px #de1dde;
   box-shadow: 0 4px 6px -6px #222;
   //border: 2px solid black;
   margin: 10px;
@@ -76,12 +74,17 @@ body > .ember-view {
 }
 
 .footer {
-
   //border: 2px solid blue;
+  box-shadow: 0 -4px 6px -6px #222;
   margin: 10px;
   padding: 5px;
   overflow: hidden;
   display: inline-block;
+
+  .copyright {
+    display: inline-block;
+    margin-top: 10px;
+  }
   .scroll-top {
     float: right;
     bottom: 20px; /* Place the button at the bottom of the page */

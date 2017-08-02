@@ -1,14 +1,15 @@
-<div class="header">
+<header class="header">
   <div class="logo">LOGO</div>
   <ul class="menu">
     {{#each menu as |item|}}
       <li class="menu-item">{{#link-to item.id tagName="button" class=(if (eq navigation.currentPage item.id) 'menu-item-button selected' 'menu-item-button') title=item.tooltip}}{{item.name}}{{/link-to}}</li>
     {{/each}}
   </ul>
-</div>
+</header>
 <div class="middle">
   {{outlet}}
 </div>
-<div class="footer">
+<footer class="footer">
+  <span class="copyright">Copyright © [PLACEHOLDER].be 2017</span>
   <button class="scroll-top" {{action "scrollTop"}}>Retour au sommet</button>
-</div>
+</footer>
