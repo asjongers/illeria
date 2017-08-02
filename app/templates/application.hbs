@@ -2,7 +2,7 @@
   <div class="logo">LOGO</div>
   <ul class="menu">
     {{#each menu as |item|}}
-      <li class="menu-item{{if (eq navigation.currentPage item.id) ' selected'}}" title={{item.tooltip}}>{{#link-to item.id}}{{item.name}}{{/link-to}}</li>
+      <li class="menu-item">{{#link-to item.id tagName="button" class=(if (eq navigation.currentPage item.id) 'menu-item-button selected' 'menu-item-button') title=item.tooltip}}{{item.name}}{{/link-to}}</li>
     {{/each}}
   </ul>
 </div>
